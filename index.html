@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Launchbox Studio | Сайты, которые делают бизнес сильнее</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary": "#ae2b00",
+                "surface-container": "#f0eee8",
+                "tertiary-container": "#d1431a",
+                "on-tertiary-container": "#fffbff",
+                "primary-fixed": "#ffdbcf",
+                "on-surface": "#1c1c18",
+                "surface-container-high": "#ebe8e2",
+                "outline": "#8f7066",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#881f00",
+                "inverse-primary": "#ffb59a",
+                "surface-tint": "#a83900",
+                "primary": "#a43700",
+                "tertiary-fixed": "#ffdbd1",
+                "background": "#fcf9f3",
+                "on-error": "#ffffff",
+                "on-secondary": "#ffffff",
+                "inverse-on-surface": "#f3f0ea",
+                "on-tertiary-fixed": "#3b0800",
+                "on-background": "#1c1c18",
+                "surface-variant": "#e5e2dc",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#e2dfde",
+                "on-surface-variant": "#5a4138",
+                "secondary": "#5f5e5e",
+                "primary-fixed-dim": "#ffb59a",
+                "on-secondary-fixed-variant": "#474746",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#fffbff",
+                "on-primary-fixed": "#380d00",
+                "secondary-fixed": "#e5e2e1",
+                "surface-dim": "#dcdad4",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed-dim": "#c8c6c5",
+                "surface-container-highest": "#e5e2dc",
+                "outline-variant": "#e3bfb2",
+                "surface": "#fcf9f3",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#31312d",
+                "tertiary-fixed-dim": "#ffb5a1",
+                "surface-bright": "#fcf9f3",
+                "surface-container-low": "#f6f3ed",
+                "on-secondary-fixed": "#1b1c1c",
+                "on-secondary-container": "#636262",
+                "on-primary-fixed-variant": "#802a00",
+                "primary-container": "#cd4700"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #a43700 0%, #cd4700 100%);
+        }
+        body {
+            cursor: none;
+        }
+        #custom-cursor {
+            width: 8px;
+            height: 8px;
+            background: #a43700;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+        #custom-cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #a43700;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.15s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Custom Cursor -->
+<div class="hidden md:block" id="custom-cursor"></div>
+<div class="hidden md:block" id="custom-cursor-outline"></div>
+<!-- Header (Shared Component: TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f3]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-6 md:px-16 py-6 max-w-full mx-auto">
+<div class="text-2xl font-black text-[#1c1c18] dark:text-[#fcf9f3] tracking-tighter font-headline">
+                Launchbox
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#5a4138] font-headline font-bold hover:text-[#a43700] transition-colors duration-300" href="#services">Services</a>
+<a class="text-[#5a4138] font-headline font-bold hover:text-[#a43700] transition-colors duration-300" href="#portfolio">Portfolio</a>
+<a class="text-[#5a4138] font-headline font-bold hover:text-[#a43700] transition-colors duration-300" href="#contacts">Contacts</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden lg:block px-8 py-3 rounded-full signature-gradient text-on-primary font-headline font-bold tracking-tight transition-transform active:scale-95 duration-200">
+                    Discuss project
+                </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 px-6 md:px-20 overflow-hidden">
+<div class="max-w-5xl relative z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-label font-semibold uppercase tracking-widest mb-8">
+                    Based in Makhachkala
+                </span>
+<h1 class="text-5xl md:text-[5.5rem] leading-[1.05] font-headline font-extrabold tracking-tighter text-on-background mb-10">
+                    Сайты, которые делают <br class="hidden md:block"/> <span class="text-primary italic">бизнес сильнее</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl mb-12 leading-relaxed">
+                    Мы создаем цифровые решения, где эстетика встречается с математикой продаж. Ваш бренд заслуживает быть исключительным.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
+                        Рассчитать стоимость
+                    </button>
+<button class="px-10 py-5 rounded-full bg-surface-container text-on-surface-variant text-lg font-headline font-bold hover:bg-surface-container-high transition-all">
+                        Наше портфолио
+                    </button>
+</div>
+</div>
+<!-- Architectural Decorative Element -->
+<div class="absolute right-0 top-0 h-full w-1/3 bg-surface-container-low -z-0 hidden lg:block">
+<img alt="Modern office interior" class="w-full h-full object-cover opacity-20 mix-blend-multiply" data-alt="Minimalist modern office space with clean lines, soft natural lighting through large windows, and warm wooden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_zDnsMoCddU6_r9EHPKTTy1pCbXEBuKcUWsDh2F9X7GvluYIRTSnPQHMEgGLl6Z_L8jJjOMrJ2D9YXO51m65U-iQpagcE5KAf2kdbAuAnKEf029Un-YHmruzqqT7rv39hdUpkV4LKl0lhRTuB3hu-VHCfw9zdqbyJQ1moKTCYJol4PWf6Ar1eibqZbzt3t_DANES-RxDHXZNRFhtmZScC76W_zWpDpCuHm__R8YQhDLVT0Sx_qpm8a3WUaKdPZsq4Q1bM0wmndJE"/>
+</div>
+</section>
+<!-- Why Us (AIDA/PAS Approach) -->
+<section class="py-32 px-6 md:px-20 bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
+<div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-background mb-8 leading-tight">
+                        Зачем вам просто «красивый» сайт, если он не приносит прибыль?
+                    </h2>
+<p class="text-lg text-on-surface-variant mb-12 font-body leading-relaxed">
+                        Большинство студий фокусируются на картинках. Мы фокусируемся на ваших целях. Каждая кнопка, каждый пиксель и каждая строка кода в Launchbox служат одной задаче — конверсии посетителя в лояльного клиента.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-2">Глубокая аналитика</h4>
+<p class="text-on-surface-variant font-body">Изучаем нишу, конкурентов и боли вашей аудитории до того, как нарисовать первый макет.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">speed</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-2">Безупречная скорость</h4>
+<p class="text-on-surface-variant font-body">Оптимизация производительности, которая радует и пользователей, и поисковые системы.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Creative Process" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Professional design team collaborating around a large monitor in a sun-drenched studio with minimalist decor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr9SbV14asDWZa0FSyYt-8DY2J1obnEz2j2HzmJ82mmDs-ucqKaH5oS6HkIiVpYwJrDpXaMkvhGSgit64eljbeCCLtnUGNQzd1vT_aTyV-YLZ-Lk-qs3HsxDD4584WCdwTGWc2npq_mfJs8Fsw1FE7BUNvKHj6GSooC3_RQTqoKbYSzKIaOdJIwFHrj2TQ7eT4z0rUyxp1FaUOEW-_xk4jbNdza_fn8COvlGIX1eslSStgPC5MpVYHvG7mgGFxKKDxcxK2vROplqdT"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
+<div class="text-primary text-4xl font-black mb-2 tracking-tighter">94%</div>
+<p class="text-sm text-on-surface-variant font-label font-medium uppercase tracking-wider">Доверие пользователей формируется через дизайн</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-32 px-6 md:px-20 bg-background" id="services">
+<div class="text-center mb-24">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter mb-6">Наши компетенции</h2>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">Инструменты для масштабирования вашего бизнеса в цифровой среде</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+<!-- Landing Page -->
+<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div class="mb-12">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">target</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Landing Page</h3>
+<p class="text-on-surface-variant mb-8 font-body leading-relaxed">Одностраничный сайт с высокой конверсией для быстрого запуска продаж конкретного продукта.</p>
+</div>
+<div class="flex items-end justify-between border-t border-outline-variant/20 pt-8">
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant opacity-60 mb-1">от</p>
+<p class="text-2xl font-headline font-bold">45 000 ₽</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Corporate Site -->
+<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div class="mb-12">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">corporate_fare</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Корпоративный сайт</h3>
+<p class="text-on-surface-variant mb-8 font-body leading-relaxed">Масштабируемая платформа для формирования имиджа компании и презентации всех услуг.</p>
+</div>
+<div class="flex items-end justify-between border-t border-outline-variant/20 pt-8">
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant opacity-60 mb-1">от</p>
+<p class="text-2xl font-headline font-bold">120 000 ₽</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- E-commerce -->
+<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div class="mb-12">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">shopping_bag</span>
+<h3 class="text-2xl font-headline font-bold mb-4">E-commerce</h3>
+<p class="text-on-surface-variant mb-8 font-body leading-relaxed">Функциональные интернет-магазины с интеграцией платежей, складов и CRM-систем.</p>
+</div>
+<div class="flex items-end justify-between border-t border-outline-variant/20 pt-8">
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant opacity-60 mb-1">от</p>
+<p class="text-2xl font-headline font-bold">180 000 ₽</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process -->
+<section class="py-32 px-6 md:px-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter">Этапы работы</h2>
+<p class="text-on-surface-variant font-body max-w-sm">Мы ценим прозрачность и соблюдение дедлайнов. Каждый шаг контролируется вами.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square">
+<span class="text-5xl font-black text-primary/10 font-headline">01</span>
+<div>
+<h4 class="text-xl font-headline font-bold mb-4">Брифинг</h4>
+<p class="text-sm text-on-surface-variant font-body">Знакомство, постановка целей, аудит рынка и конкурентов.</p>
+</div>
+</div>
+<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square">
+<span class="text-5xl font-black text-primary/10 font-headline">02</span>
+<div>
+<h4 class="text-xl font-headline font-bold mb-4">Дизайн</h4>
+<p class="text-sm text-on-surface-variant font-body">Создание UX-прототипа и визуальной концепции бренда.</p>
+</div>
+</div>
+<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square">
+<span class="text-5xl font-black text-primary/10 font-headline">03</span>
+<div>
+<h4 class="text-xl font-headline font-bold mb-4">Разработка</h4>
+<p class="text-sm text-on-surface-variant font-body">Чистый код, адаптивная верстка и интеграция CMS.</p>
+</div>
+</div>
+<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square">
+<span class="text-5xl font-black text-primary/10 font-headline">04</span>
+<div>
+<h4 class="text-xl font-headline font-bold mb-4">Запуск</h4>
+<p class="text-sm text-on-surface-variant font-body">Тестирование, SEO-подготовка и релиз проекта.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section / Lead Form -->
+<section class="py-32 px-6 md:px-20 bg-background" id="contacts">
+<div class="max-w-7xl mx-auto bg-surface-container-highest rounded-[3rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 md:p-20 bg-on-surface text-surface">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-10 leading-tight">Готовы обсудить ваш следующий проект?</h2>
+<p class="text-surface-variant mb-12 text-lg">Оставьте заявку, и мы свяжемся с вами в течение рабочего дня, чтобы обсудить детали и рассчитать сроки.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<p class="text-sm text-surface-variant uppercase font-label">Телефон</p>
+<p class="text-xl font-headline">+7 (988) 123-45-67</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<p class="text-sm text-surface-variant uppercase font-label">Студия</p>
+<p class="text-xl font-headline">Махачкала, ул. Расула Гамзатова, 12</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-12 md:p-20 bg-surface-container-lowest">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase text-on-surface-variant">Ваше имя</label>
+<input class="w-full bg-surface-container border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Иван" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase text-on-surface-variant">Телефон</label>
+<input class="w-full bg-surface-container border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="+7 (999) 000-00-00" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase text-on-surface-variant">О проекте</label>
+<textarea class="w-full bg-surface-container border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Расскажите немного о вашей задаче..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all" type="submit">
+                            Отправить запрос
+                        </button>
+<p class="text-xs text-on-surface-variant text-center mt-6">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full pt-32 pb-16 bg-[#f0eee8] dark:bg-[#2a2a24]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 px-20 w-full mb-16">
+<div>
+<div class="text-xl font-bold text-[#1c1c18] dark:text-[#fcf9f3] mb-8 font-headline">Launchbox</div>
+<p class="text-[#636262] dark:text-[#b0ada8] font-body max-w-sm mb-12">
+                    Создаем цифровые продукты мирового уровня для амбициозных компаний Дагестана и всей России.
+                </p>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-10">
+<div class="flex flex-col gap-4">
+<span class="font-['Inter'] text-sm uppercase tracking-widest text-on-surface mb-2">Навигация</span>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Services</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Portfolio</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Contacts</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Inter'] text-sm uppercase tracking-widest text-on-surface mb-2">Право</span>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Privacy</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="px-20 border-t border-outline-variant/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Inter'] text-sm uppercase tracking-widest text-[#636262] dark:text-[#b0ada8]">
+                © 2024 Launchbox Studio. Makhachkala.
+            </p>
+<div class="flex gap-2 items-center">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="font-['Inter'] text-sm uppercase tracking-widest text-[#636262] dark:text-[#b0ada8]">Studio Status: Accepting Projects</span>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        const outline = document.getElementById('custom-cursor-outline');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+            outline.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
+        });
+
+        // Hover Effect for Cursor
+        const interactiveElements = document.querySelectorAll('a, button, input, textarea');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                outline.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px) scale(1.5)`;
+                outline.style.backgroundColor = 'rgba(164, 55, 0, 0.05)';
+            });
+            el.addEventListener('mouseleave', () => {
+                outline.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px) scale(1)`;
+                outline.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+</body></html>
