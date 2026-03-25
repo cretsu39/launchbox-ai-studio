@@ -308,9 +308,8 @@
 <div class="flex-grow flex flex-col">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-white transition-colors duration-500">Запуск</h4>
 <p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body flex-grow">Тестирование, SEO-подготовка и релиз проекта.</p>
-<button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full mt-8 flex items-center cursor-none hover:-translate-y-0.5 transition-transform active:scale-95">
-    <div class="h-px bg-primary group-hover:bg-white transition-colors duration-500 flex-grow"></div>
-    <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-500 -ml-2 text-3xl cursor-none">chevron_right</span>
+<button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full h-[1px] bg-primary group-hover:bg-white group-hover/arrow:h-[2px] transition-all duration-300 mt-8 relative flex items-center justify-end cursor-none group/arrow">
+    <span class="material-symbols-outlined absolute -right-3 text-primary group-hover:text-white group-hover/arrow:translate-x-1.5 group-hover/arrow:font-bold transition-all duration-300 cursor-none text-3xl font-light">chevron_right</span>
 </button>
 </div>
 </div>
@@ -437,12 +436,11 @@
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 isHovering = true;
-                const isProcessCard = el.closest('.process-card') !== null || el.classList.contains('process-card');
-                const cursorColor = isProcessCard ? '#636262' : '#a43700'; // Gray on process cards, orange otherwise
+                const cursorColor = '#ffffff'; // White everywhere on hover
                 
                 cursor.style.backgroundColor = cursorColor;
                 outline.style.borderColor = cursorColor;
-                outline.style.backgroundColor = isProcessCard ? 'rgba(99, 98, 98, 0.05)' : 'rgba(164, 55, 0, 0.05)';
+                outline.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
                 
                 cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px) scale(1.5)`;
                 outline.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px) scale(1.5)`;
