@@ -436,7 +436,7 @@
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 isHovering = true;
-                const needsWhite = el.closest('.cursor-white-hover') !== null || el.classList.contains('cursor-white-hover') || el.classList.contains('process-card');
+                const needsWhite = el.closest('.cursor-white-hover') !== null || el.closest('.process-card') !== null;
                 const cursorColor = needsWhite ? '#ffffff' : '#a43700';
                 
                 cursor.style.backgroundColor = cursorColor;
