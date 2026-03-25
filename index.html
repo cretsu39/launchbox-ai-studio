@@ -111,7 +111,7 @@
 <!-- Header (Shared Component: TopNavBar) -->
 <header class="fixed top-0 w-full z-50 bg-[#fcf9f3]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl">
 <nav class="flex justify-between items-center px-6 md:px-16 py-6 max-w-full mx-auto">
-<div class="text-2xl font-black text-[#1c1c18] dark:text-[#fcf9f3] tracking-tighter font-headline">
+<div class="text-2xl font-black text-[#1c1c18] dark:text-[#fcf9f3] tracking-tighter font-headline hover:text-primary transition-colors duration-300 cursor-none">
                 Launchbox
             </div>
 <div class="hidden md:flex items-center space-x-12">
@@ -120,8 +120,8 @@
 <a class="text-[#5a4138] font-headline font-bold hover:text-[#a43700] transition-colors duration-300" href="#contacts">Контакты</a>
 </div>
 <div class="flex items-center gap-6">
-<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="hidden lg:block px-8 py-3 rounded-full signature-gradient text-on-primary font-headline font-bold tracking-tight transition-transform active:scale-95 duration-200">
-                    Обсудить проект
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="hidden lg:block px-8 py-3 rounded-full signature-gradient text-on-primary font-headline font-bold tracking-tight transition-all hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-1 active:scale-95 duration-300 cursor-none">
+                    Заказать звонок
                 </button>
 <button class="md:hidden text-on-surface">
 <span class="material-symbols-outlined">menu</span>
@@ -133,7 +133,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-24 px-6 md:px-20 overflow-hidden">
 <div class="max-w-5xl relative z-10">
-<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-label font-semibold uppercase tracking-widest mb-8">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-label font-semibold uppercase tracking-widest mb-8 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 cursor-none">
                     Базируемся в Махачкале
                 </span>
 <h1 class="text-5xl md:text-[5.5rem] leading-[1.05] font-headline font-extrabold tracking-tighter text-on-background mb-10">
@@ -143,17 +143,18 @@
                     Мы создаем цифровые решения, где эстетика встречается с математикой продаж. Ваш бренд заслуживает быть исключительным.
                 </p>
 <div class="flex flex-col sm:flex-row gap-6">
-<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
-                        Рассчитать стоимость
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all active:scale-95 cursor-none">
+                        Обсудить проект
                     </button>
-<button onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 rounded-full bg-surface-container text-on-surface-variant text-lg font-headline font-bold hover:bg-surface-container-high transition-all">
+<button onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="group flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-surface-container text-on-surface-variant text-lg font-headline font-bold hover:bg-surface-container-high hover:-translate-y-1 transition-all cursor-none">
                         Как мы работаем
+                        <span class="material-symbols-outlined group-hover:text-primary transition-colors cursor-none">arrow_forward</span>
                     </button>
 </div>
 </div>
 <!-- Architectural Decorative Element -->
-<div class="absolute right-0 top-0 h-full w-1/3 bg-surface-container-low -z-0 hidden lg:block">
-<img alt="Modern office interior" class="w-full h-full object-cover opacity-20 mix-blend-multiply" data-alt="Minimalist modern office space with clean lines, soft natural lighting through large windows, and warm wooden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_zDnsMoCddU6_r9EHPKTTy1pCbXEBuKcUWsDh2F9X7GvluYIRTSnPQHMEgGLl6Z_L8jJjOMrJ2D9YXO51m65U-iQpagcE5KAf2kdbAuAnKEf029Un-YHmruzqqT7rv39hdUpkV4LKl0lhRTuB3hu-VHCfw9zdqbyJQ1moKTCYJol4PWf6Ar1eibqZbzt3t_DANES-RxDHXZNRFhtmZScC76W_zWpDpCuHm__R8YQhDLVT0Sx_qpm8a3WUaKdPZsq4Q1bM0wmndJE"/>
+<div class="absolute right-0 top-0 h-full w-1/3 bg-surface-container-low hover:bg-primary/40 transition-colors duration-500 -z-0 hidden lg:block cursor-none group">
+<img alt="Modern office interior" class="w-full h-full object-cover opacity-20 group-hover:opacity-40 mix-blend-multiply transition-opacity duration-500 cursor-none" data-alt="Minimalist modern office space with clean lines, soft natural lighting through large windows, and warm wooden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_zDnsMoCddU6_r9EHPKTTy1pCbXEBuKcUWsDh2F9X7GvluYIRTSnPQHMEgGLl6Z_L8jJjOMrJ2D9YXO51m65U-iQpagcE5KAf2kdbAuAnKEf029Un-YHmruzqqT7rv39hdUpkV4LKl0lhRTuB3hu-VHCfw9zdqbyJQ1moKTCYJol4PWf6Ar1eibqZbzt3t_DANES-RxDHXZNRFhtmZScC76W_zWpDpCuHm__R8YQhDLVT0Sx_qpm8a3WUaKdPZsq4Q1bM0wmndJE"/>
 </div>
 </section>
 <!-- Why Us (AIDA/PAS Approach) -->
@@ -192,7 +193,7 @@
 <img alt="Creative Process" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Professional design team collaborating around a large monitor in a sun-drenched studio with minimalist decor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr9SbV14asDWZa0FSyYt-8DY2J1obnEz2j2HzmJ82mmDs-ucqKaH5oS6HkIiVpYwJrDpXaMkvhGSgit64eljbeCCLtnUGNQzd1vT_aTyV-YLZ-Lk-qs3HsxDD4584WCdwTGWc2npq_mfJs8Fsw1FE7BUNvKHj6GSooC3_RQTqoKbYSzKIaOdJIwFHrj2TQ7eT4z0rUyxp1FaUOEW-_xk4jbNdza_fn8COvlGIX1eslSStgPC5MpVYHvG7mgGFxKKDxcxK2vROplqdT"/>
 </div>
 <div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
-<div class="text-primary text-4xl font-black mb-2 tracking-tighter">94%</div>
+<div class="text-primary text-4xl font-black mb-2 tracking-tighter">90%</div>
 <p class="text-sm text-on-surface-variant font-label font-medium uppercase tracking-wider">Доверие пользователей формируется через дизайн</p>
 </div>
 </div>
@@ -201,12 +202,12 @@
 <!-- Services -->
 <section class="py-32 px-6 md:px-20 bg-background" id="services">
 <div class="text-center mb-24">
-<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter mb-6">Наши компетенции</h2>
-<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">Инструменты для масштабирования вашего бизнеса в цифровой среде</p>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter mb-6">Наши услуги</h2>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">Сайт это фундамент для работы бизнеса в интернете и начнем мы с него</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 <!-- Landing Page -->
-<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-none">
 <div class="mb-12">
 <span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">target</span>
 <h3 class="text-2xl font-headline font-bold mb-4">Landing Page</h3>
@@ -221,7 +222,7 @@
 </div>
 </div>
 <!-- Corporate Site -->
-<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-none">
 <div class="mb-12">
 <span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">corporate_fare</span>
 <h3 class="text-2xl font-headline font-bold mb-4">Корпоративный сайт</h3>
@@ -236,7 +237,7 @@
 </div>
 </div>
 <!-- E-commerce -->
-<div class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+<div onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="group p-10 rounded-3xl bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-none">
 <div class="mb-12">
 <span class="material-symbols-outlined text-5xl text-primary mb-6" data-weight="fill">shopping_bag</span>
 <h3 class="text-2xl font-headline font-bold mb-4">E-commerce</h3>
@@ -259,31 +260,44 @@
 <h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter">Этапы работы</h2>
 <p class="text-on-surface-variant font-body max-w-sm">Мы ценим прозрачность и соблюдение дедлайнов. Каждый шаг контролируется вами.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+<div class="hidden md:block absolute top-20 left-[12%] right-[12%] h-[2px] bg-primary/10 z-0"></div>
+<div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
+<div class="flex items-center justify-between">
 <span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">01</span>
-<div>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">assignment</span>
+</div>
+<div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Брифинг</h4>
 <p class="text-sm text-on-surface-variant font-body">Знакомство, постановка целей, аудит рынка и конкурентов.</p>
 </div>
 </div>
-<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none">
+<div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
+<div class="flex items-center justify-between">
 <span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">02</span>
-<div>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">draw</span>
+</div>
+<div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Дизайн</h4>
 <p class="text-sm text-on-surface-variant font-body">Создание UX-прототипа и визуальной концепции бренда.</p>
 </div>
 </div>
-<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none">
+<div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
+<div class="flex items-center justify-between">
 <span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">03</span>
-<div>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">code</span>
+</div>
+<div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Разработка</h4>
 <p class="text-sm text-on-surface-variant font-body">Чистый код, адаптивная верстка и интеграция CMS.</p>
 </div>
 </div>
-<div class="bg-surface p-12 rounded-3xl flex flex-col justify-between aspect-square group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none">
+<div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
+<div class="flex items-center justify-between">
 <span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">04</span>
-<div>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">rocket_launch</span>
+</div>
+<div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Запуск</h4>
 <p class="text-sm text-on-surface-variant font-body">Тестирование, SEO-подготовка и релиз проекта.</p>
 </div>
@@ -330,10 +344,15 @@
 <label class="text-xs font-label uppercase text-on-surface-variant">О проекте</label>
 <textarea class="w-full bg-surface-container border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Расскажите немного о вашей задаче..." rows="4"></textarea>
 </div>
-<button class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all" type="submit">
-                            Отправить запрос
-                        </button>
-<p class="text-xs text-on-surface-variant text-center mt-6">Оставляя заявку, вы соглашаетесь с <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline">Политикой обработки ПД</button>.</p>
+<div class="space-y-2 flex flex-col mb-6">
+<label class="flex items-start gap-3 cursor-none">
+<input type="checkbox" required onchange="this.form.querySelector('button[type=submit]').disabled = !this.checked" class="mt-1 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container cursor-none"/>
+<span class="text-xs text-on-surface-variant leading-tight cursor-none">Я согласен на обработку <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">персональных данных</button>.</span>
+</label>
+</div>
+<button disabled class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all cursor-none disabled:opacity-50 disabled:grayscale disabled:-translate-y-0" type="submit">
+Отправить запрос
+</button>
 </form>
 </div>
 </div>
@@ -359,9 +378,9 @@
 <div class="grid grid-cols-2 gap-10">
 <div class="flex flex-col gap-4">
 <span class="font-['Inter'] text-sm uppercase tracking-widest text-on-surface mb-2">Навигация</span>
-<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Услуги</a>
-<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Портфолио</a>
-<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest" href="#">Контакты</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none" href="#services">Услуги</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none" href="#process">Как мы работаем</a>
+<a class="text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none" href="#contacts">Контакты</a>
 </div>
 <div class="flex flex-col gap-4">
 <span class="font-['Inter'] text-sm uppercase tracking-widest text-on-surface mb-2">Документация</span>
@@ -432,13 +451,13 @@
                 <label class="text-xs font-label uppercase text-on-surface-variant">Телефон</label>
                 <input class="w-full bg-surface-container border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all cursor-none" placeholder="+7 (999) 000-00-00" type="tel" required/>
             </div>
-            <div class="space-y-2 flex flex-col">
+            <div class="space-y-2 flex flex-col mb-6">
                 <label class="flex items-start gap-3 cursor-none">
-                    <input type="checkbox" required class="mt-1 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container cursor-none"/>
-                    <span class="text-xs text-on-surface-variant leading-tight cursor-none">Я даю согласие на обработку моих персональных данных в соответствии с <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">Политикой</button>.</span>
+                    <input type="checkbox" required onchange="this.form.querySelector('button[type=submit]').disabled = !this.checked" class="mt-1 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container cursor-none"/>
+                    <span class="text-xs text-on-surface-variant leading-tight cursor-none">Я согласен на обработку <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">персональных данных</button>.</span>
                 </label>
             </div>
-            <button class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all cursor-none" type="submit">
+            <button disabled class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all cursor-none disabled:opacity-50 disabled:grayscale disabled:-translate-y-0" type="submit">
                 Отправить заявку
             </button>
         </form>
