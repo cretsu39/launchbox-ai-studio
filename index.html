@@ -432,9 +432,9 @@
             }
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, input, textarea, label, .group');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
+        document.addEventListener('mouseover', (e) => {
+            const el = e.target.closest('a, button, input, textarea, label, .group');
+            if (el) {
                 isHovering = true;
                 const needsWhite = el.closest('.cursor-white-hover') !== null || el.closest('.process-card') !== null;
                 const cursorColor = needsWhite ? '#ffffff' : '#a43700';
@@ -445,15 +445,20 @@
                 
                 cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px) scale(1.5)`;
                 outline.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px) scale(1.5)`;
-            });
-            el.addEventListener('mouseleave', () => {
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            const el = e.target.closest('a, button, input, textarea, label, .group');
+            const enteringEl = e.relatedTarget ? (e.relatedTarget.closest ? e.relatedTarget.closest('a, button, input, textarea, label, .group') : null) : null;
+            if (el && !enteringEl) {
                 isHovering = false;
                 outline.style.backgroundColor = 'transparent';
                 cursor.style.backgroundColor = '#a43700';
                 outline.style.borderColor = '#a43700';
                 cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px) scale(1)`;
                 outline.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px) scale(1)`;
-            });
+            }
         });
     </script>
 <!-- Modals -->
