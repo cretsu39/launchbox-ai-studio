@@ -146,7 +146,7 @@
 <button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all active:scale-95 cursor-none">
                         Обсудить проект
                     </button>
-<button onclick="document.getElementById('why-us').scrollIntoView({behavior: 'smooth'})" class="group flex items-center justify-center gap-3 px-10 py-[1.125rem] rounded-full bg-white border-2 border-primary text-on-surface text-lg font-headline font-bold hover:bg-white transition-all cursor-none">
+<button onclick="document.getElementById('why-us').scrollIntoView({behavior: 'smooth'})" class="group flex items-center justify-center gap-3 px-10 py-[1.125rem] rounded-full bg-transparent border-2 border-primary text-on-surface text-lg font-headline font-bold hover:bg-white transition-all cursor-none">
                         Почему мы
                         <span class="material-symbols-outlined group-hover:text-primary group-hover:translate-x-1.5 transition-all duration-300 cursor-none">arrow_forward</span>
                     </button>
@@ -188,7 +188,7 @@
 </div>
 </div>
 <div class="mt-16 flex justify-center w-full max-w-2xl">
-    <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="w-16 h-16 rounded-full bg-on-surface text-white flex items-center justify-center group hover:bg-primary transition-colors duration-300 cursor-none active:scale-95">
+    <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="w-16 h-16 rounded-full bg-transparent border border-white text-white flex items-center justify-center group hover:bg-primary hover:border-primary transition-colors duration-300 cursor-none active:scale-95">
         <span class="material-symbols-outlined text-3xl cursor-none scale-y-125">arrow_downward</span>
     </button>
 </div>
@@ -267,14 +267,15 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
 <div class="hidden md:block absolute top-20 left-[12%] right-[12%] h-[2px] bg-primary/10 z-0"></div>
-<div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
+<div class="process-card bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
 <div class="flex items-center justify-between">
 <span class="text-5xl font-black text-primary font-headline group-hover:text-white transition-colors duration-500">01</span>
 <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors duration-500">assignment</span>
 </div>
-<div class="flex-grow">
+<div class="flex-grow flex flex-col">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-white transition-colors duration-500">Брифинг</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body">Знакомство, постановка целей, аудит рынка и конкурентов.</p>
+<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body flex-grow">Знакомство, постановка целей, аудит рынка и конкурентов.</p>
+<div class="w-full h-px bg-primary group-hover:bg-white transition-colors duration-500 mt-8"></div>
 </div>
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
@@ -282,9 +283,10 @@
 <span class="text-5xl font-black text-primary font-headline group-hover:text-white transition-colors duration-500">02</span>
 <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors duration-500">draw</span>
 </div>
-<div class="flex-grow">
+<div class="flex-grow flex flex-col">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-white transition-colors duration-500">Дизайн</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body">Создание UX-прототипа и визуальной концепции бренда.</p>
+<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body flex-grow">Создание UX-прототипа и визуальной концепции бренда.</p>
+<div class="w-full h-px bg-primary group-hover:bg-white transition-colors duration-500 mt-8"></div>
 </div>
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
@@ -292,9 +294,10 @@
 <span class="text-5xl font-black text-primary font-headline group-hover:text-white transition-colors duration-500">03</span>
 <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors duration-500">code</span>
 </div>
-<div class="flex-grow">
+<div class="flex-grow flex flex-col">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-white transition-colors duration-500">Разработка</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body">Чистый код, адаптивная верстка и интеграция CMS.</p>
+<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body flex-grow">Чистый код, адаптивная верстка и интеграция CMS.</p>
+<div class="w-full h-px bg-primary group-hover:bg-white transition-colors duration-500 mt-8"></div>
 </div>
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
@@ -302,9 +305,12 @@
 <span class="text-5xl font-black text-primary font-headline group-hover:text-white transition-colors duration-500">04</span>
 <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors duration-500">rocket_launch</span>
 </div>
-<div class="flex-grow">
+<div class="flex-grow flex flex-col">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-white transition-colors duration-500">Запуск</h4>
-<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body">Тестирование, SEO-подготовка и релиз проекта.</p>
+<p class="text-sm text-on-surface-variant group-hover:text-white/90 transition-colors duration-500 font-body flex-grow">Тестирование, SEO-подготовка и релиз проекта.</p>
+<div onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="w-full h-px bg-primary group-hover:bg-white transition-colors duration-500 mt-8 relative flex items-center justify-end cursor-none hover:opacity-80">
+    <span class="material-symbols-outlined absolute -right-2 bg-surface group-hover:bg-primary text-primary group-hover:text-white transition-colors duration-500 cursor-none px-2 text-xl">east</span>
+</div>
 </div>
 </div>
 </div>
@@ -430,13 +436,21 @@
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 isHovering = true;
-                outline.style.backgroundColor = 'rgba(164, 55, 0, 0.05)';
+                const isProcessCard = el.closest('.process-card') !== null || el.classList.contains('process-card');
+                const cursorColor = isProcessCard ? '#636262' : '#a43700'; // Gray on process cards, orange otherwise
+                
+                cursor.style.backgroundColor = cursorColor;
+                outline.style.borderColor = cursorColor;
+                outline.style.backgroundColor = isProcessCard ? 'rgba(99, 98, 98, 0.05)' : 'rgba(164, 55, 0, 0.05)';
+                
                 cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px) scale(1.5)`;
                 outline.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px) scale(1.5)`;
             });
             el.addEventListener('mouseleave', () => {
                 isHovering = false;
                 outline.style.backgroundColor = 'transparent';
+                cursor.style.backgroundColor = '#a43700';
+                outline.style.borderColor = '#a43700';
                 cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px) scale(1)`;
                 outline.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px) scale(1)`;
             });
