@@ -120,7 +120,7 @@
 <a class="text-[#5a4138] font-headline font-bold hover:text-[#a43700] transition-colors duration-300" href="#contacts">Контакты</a>
 </div>
 <div class="flex items-center gap-6">
-<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="hidden lg:block px-8 py-3 rounded-full signature-gradient text-on-primary font-headline font-bold tracking-tight transition-all hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-1 active:scale-95 duration-300 cursor-none">
+<button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="hidden lg:block px-8 py-3 rounded-full signature-gradient text-on-primary font-headline font-bold tracking-tight transition-all hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-1 active:scale-95 duration-300 cursor-none">
                     Заказать звонок
                 </button>
 <button class="md:hidden text-on-surface">
@@ -137,18 +137,18 @@
                     Базируемся в Махачкале
                 </span>
 <h1 class="text-5xl md:text-[5.5rem] leading-[1.05] font-headline font-extrabold tracking-tighter text-on-background mb-10">
-                    Сайты, которые делают <br class="hidden md:block"/> <span class="text-primary italic">бизнес сильнее</span>
+                    Сайты, которые делают <br class="hidden md:block"/> <span class="text-primary italic">бизнес сильнее.</span>
 </h1>
 <p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl mb-12 leading-relaxed">
                     Мы создаем цифровые решения, где эстетика встречается с математикой продаж. Ваш бренд заслуживает быть исключительным.
                 </p>
 <div class="flex flex-col sm:flex-row gap-6">
-<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all active:scale-95 cursor-none">
+<button onclick="document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all active:scale-95 cursor-none">
                         Обсудить проект
                     </button>
-<button onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" class="group flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-surface-container text-on-surface-variant text-lg font-headline font-bold hover:bg-surface-container-high hover:-translate-y-1 transition-all cursor-none">
-                        Как мы работаем
-                        <span class="material-symbols-outlined group-hover:text-primary transition-colors cursor-none">arrow_forward</span>
+<button onclick="document.getElementById('why-us').scrollIntoView({behavior: 'smooth'})" class="group flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-surface-container text-on-surface-variant text-lg font-headline font-bold hover:bg-surface-container-high hover:-translate-y-1 transition-all cursor-none">
+                        Почему мы
+                        <span class="material-symbols-outlined group-hover:text-primary transition-colors cursor-none">arrow_downward</span>
                     </button>
 </div>
 </div>
@@ -158,7 +158,7 @@
 </div>
 </section>
 <!-- Why Us (AIDA/PAS Approach) -->
-<section class="py-32 px-6 md:px-20 bg-surface-container">
+<section id="why-us" class="py-32 px-6 md:px-20 bg-surface-container">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
 <div>
 <h2 class="text-4xl md:text-5xl font-headline font-bold text-on-background mb-8 leading-tight">
@@ -187,6 +187,11 @@
 </div>
 </div>
 </div>
+<div class="mt-16 flex justify-center lg:justify-start">
+    <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="w-16 h-16 rounded-full border-2 border-primary/20 flex items-center justify-center group hover:bg-primary/10 transition-colors cursor-none active:scale-95 hover:border-primary/50">
+        <span class="material-symbols-outlined text-primary text-3xl group-hover:translate-y-1 transition-transform cursor-none">south</span>
+    </button>
+</div>
 </div>
 <div class="relative group">
 <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
@@ -203,7 +208,7 @@
 <section class="py-32 px-6 md:px-20 bg-background" id="services">
 <div class="text-center mb-24">
 <h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter mb-6">Наши услуги</h2>
-<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">Сайт это фундамент для работы бизнеса в интернете и начнем мы с него</p>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">Сайт это фундамент для работы бизнеса в интернете и начнем мы с него.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 <!-- Landing Page -->
@@ -264,8 +269,8 @@
 <div class="hidden md:block absolute top-20 left-[12%] right-[12%] h-[2px] bg-primary/10 z-0"></div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
 <div class="flex items-center justify-between">
-<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">01</span>
-<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">assignment</span>
+<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-[#ff8a4c] transition-colors duration-500">01</span>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-[#ff8a4c] transition-colors duration-500">assignment</span>
 </div>
 <div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Брифинг</h4>
@@ -274,8 +279,8 @@
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
 <div class="flex items-center justify-between">
-<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">02</span>
-<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">draw</span>
+<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-[#ff8a4c] transition-colors duration-500">02</span>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-[#ff8a4c] transition-colors duration-500">draw</span>
 </div>
 <div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Дизайн</h4>
@@ -284,8 +289,8 @@
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
 <div class="flex items-center justify-between">
-<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">03</span>
-<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">code</span>
+<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-[#ff8a4c] transition-colors duration-500">03</span>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-[#ff8a4c] transition-colors duration-500">code</span>
 </div>
 <div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Разработка</h4>
@@ -294,8 +299,8 @@
 </div>
 <div class="bg-surface p-10 lg:p-12 rounded-3xl flex flex-col gap-8 relative z-10 group hover:bg-surface-container-high hover:-translate-y-2 hover:shadow-xl transition-all duration-500 cursor-none h-full">
 <div class="flex items-center justify-between">
-<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-primary transition-colors duration-500">04</span>
-<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors duration-500">rocket_launch</span>
+<span class="text-5xl font-black text-primary/10 font-headline group-hover:text-[#ff8a4c] transition-colors duration-500">04</span>
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-[#ff8a4c] transition-colors duration-500">rocket_launch</span>
 </div>
 <div class="flex-grow">
 <h4 class="text-xl font-headline font-bold mb-4 group-hover:text-on-surface transition-colors duration-500">Запуск</h4>
@@ -347,7 +352,7 @@
 <div class="space-y-2 flex flex-col mb-6">
 <label class="flex items-start gap-3 cursor-none">
 <input type="checkbox" required onchange="this.form.querySelector('button[type=submit]').disabled = !this.checked" class="mt-1 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container cursor-none"/>
-<span class="text-xs text-on-surface-variant leading-tight cursor-none">Я согласен на обработку <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">персональных данных</button>.</span>
+<span class="text-xs text-on-surface-variant leading-tight cursor-none">Я согласен с <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">политикой конфиденциальности</button> и на <button type="button" onclick="document.getElementById('data-policy-modal').classList.remove('hidden')" class="text-primary hover:underline cursor-none">обработку данных</button>.</span>
 </label>
 </div>
 <button disabled class="w-full py-5 rounded-full signature-gradient text-on-primary text-lg font-headline font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all cursor-none disabled:opacity-50 disabled:grayscale disabled:-translate-y-0" type="submit">
@@ -384,8 +389,8 @@
 </div>
 <div class="flex flex-col gap-4">
 <span class="font-['Inter'] text-sm uppercase tracking-widest text-on-surface mb-2">Документация</span>
-<button onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-left text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none">Политика обработки ПД</button>
-<button onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-left text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none">Пользовательское соглашение</button>
+<button onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-left text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none">Политика конфиденциальности</button>
+<button onclick="document.getElementById('data-policy-modal').classList.remove('hidden')" class="text-left text-[#636262] dark:text-[#b0ada8] hover:underline decoration-2 underline-offset-4 transition-opacity font-['Inter'] text-sm uppercase tracking-widest cursor-none">Политика обработки данных</button>
 </div>
 </div>
 </div>
@@ -399,6 +404,9 @@
 </div>
 </div>
 </footer>
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container hover:text-on-primary-container text-on-surface-variant transition-all hover:-translate-y-2 z-[90] cursor-none group">
+    <span class="material-symbols-outlined group-hover:text-primary transition-colors cursor-none">arrow_upward</span>
+</button>
 <script>
         let mouseX = 0, mouseY = 0;
         let isHovering = false;
@@ -470,13 +478,27 @@
         <button onclick="document.getElementById('privacy-modal').classList.add('hidden')" class="absolute top-6 right-6 text-on-surface-variant hover:text-primary cursor-none">
             <span class="material-symbols-outlined">close</span>
         </button>
+        <h3 class="text-2xl md:text-3xl font-headline font-extrabold mb-6">Политика конфиденциальности</h3>
+        <div class="overflow-y-auto pr-4 space-y-4 text-sm text-on-surface-variant font-body">
+            <p><strong>1. Общие положения</strong><br>Настоящая Политика конфиденциальности определяет порядок обработки и защиты информации о физических лицах, пользующихся услугами сайта Launchbox.</p>
+            <p><strong>2. Конфиденциальность</strong><br>Мы обеспечиваем строгую конфиденциальность всех данных посетителей в соответствии с применяемым законодательством РФ (2026).</p>
+        </div>
+    </div>
+</div>
+
+<div id="data-policy-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-background/80 backdrop-blur-md cursor-none" onclick="document.getElementById('data-policy-modal').classList.add('hidden')"></div>
+    <div class="relative bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] shadow-2xl max-w-2xl w-full max-h-[80vh] flex flex-col">
+        <button onclick="document.getElementById('data-policy-modal').classList.add('hidden')" class="absolute top-6 right-6 text-on-surface-variant hover:text-primary cursor-none">
+            <span class="material-symbols-outlined">close</span>
+        </button>
         <h3 class="text-2xl md:text-3xl font-headline font-extrabold mb-6">Политика обработки ПД</h3>
         <div class="overflow-y-auto pr-4 space-y-4 text-sm text-on-surface-variant font-body">
-            <p><strong>1. Общие положения</strong><br>Настоящая политика обработки персональных данных (ПД) разработана в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» (в редакции 2026 года) и определяет порядок обработки ПД и меры по обеспечению безопасности ПД, предпринимаемые Launchbox Studio.</p>
-            <p><strong>2. Собираемые данные</strong><br>Мы собираем следующие данные: Имя, контактный телефон, IP-адрес, cookie-файлы (включая технические и аналитические данные Яндекс Метрики).</p>
-            <p><strong>3. Цели обработки</strong><br>Связь с клиентом для консультации, расчета стоимости услуг и заключения договора. Сбор обезличенных данных метрик для улучшения сайта.</p>
-            <p><strong>4. Хранение и локализация</strong><br>ПД хранятся исключительно на серверах на территории РФ. Первоначальный сбор и база данных локализованы в России. Передача третьим лицам не осуществляется, кроме случаев, предусмотренных законодательством РФ.</p>
-            <p><strong>5. Права субъектов ПД</strong><br>Пользователь имеет право в любой момент отозвать свое согласие на обработку ПД, направив уведомление Оператору. Требование галочки согласия является обязательным.</p>
+            <p><strong>1. Общие положения</strong><br>Настоящая политика обработки персональных данных (ПД) разработана в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» (в редакции 2026 года).</p>
+            <p><strong>2. Собираемые данные</strong><br>Имя, контактный телефон, IP-адрес, cookie-файлы.</p>
+            <p><strong>3. Цели обработки</strong><br>Связь с клиентом для консультации, расчета стоимости услуг и заключения договора.</p>
+            <p><strong>4. Хранение и локализация</strong><br>ПД хранятся исключительно на серверах на территории РФ. Первоначальный сбор и база данных локализованы в России.</p>
+            <p><strong>5. Права субъектов ПД</strong><br>Пользователь имеет право в любой момент отозвать свое согласие на обработку ПД.</p>
         </div>
     </div>
 </div>
